@@ -1,1 +1,1 @@
-web: ng serve
+web: node ./dist/server/bin/www.js
