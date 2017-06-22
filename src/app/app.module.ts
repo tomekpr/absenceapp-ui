@@ -15,7 +15,7 @@ import { PingService } from './services/ping.service';
     HttpModule
   ],
   providers: [
-    {provide: 'API_PING_URL', useValue: 'http://localhost:9292/'},
+    {provide: 'API_PING_URL', useValue: 'https://absenceapp.herokuapp.com/'},
     {provide: PingService, useClass: PingService}
   ],
   bootstrap: [AppComponent]
