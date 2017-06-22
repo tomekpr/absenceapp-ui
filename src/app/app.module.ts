@@ -1,16 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+
+import { PingService } from './services/ping.service';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'API_PING_URL', useValue: 'http://localhost:9292/'},
+    {provide: PingService, useClass: PingService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

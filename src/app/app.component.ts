@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PingService } from './services/ping.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private pingService: PingService) {
+
+  }
+
+  requestPing() {
+    this.pingService.ping();
+    console.log("Done. Did you get pong?");
+  }
 }
