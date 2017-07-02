@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row lead-top-row">
+    <div class="col-sm-12 text-center">
+      <h1 gutter-bottom clearfix align-center>Sign up on {{brandName}}</h1>
+      <aside class="clearfix">Already have an account? <a class="call-to-action" [routerLink]="['/login']">Log In</a>
+      </aside>
+    </div>
+  </div>
+
+  <div class="row lead-top-row">
+       <div class="col-xs-6 col-md-6">
+
+           <div class="panel status panel-success">
+               <div class="panel-heading">
+                   <h1 class="panel-title text-center">I want to join as a business</h1>
+               </div>
+               <div class="panel-body text-center">
+                   Enable your employees to use the system
+               </div>
+               <div class="panel-body text-center">
+                 <a href="#joinpro"><button class="btn-block ui positive labeled icon button pull-center">Join as a pro</button></a>
+               </div>
+           </div>
+
+       </div>
+
+       <div class="col-xs-6 col-md-6">
+
+           <div class="panel status panel-warning">
+               <div class="panel-heading">
+                   <h1 class="panel-title text-center">I want to create standard account</h1>
+               </div>
+               <div class="panel-body text-center">
+                   Submit your leave requests, check holiday allowance and much more!
+               </div>
+               <div class="panel-body text-center">
+                 <a [routerLink]="['/joinuser']"><button class="btn-block ui positive labeled icon button pull-center">Join to get hired</button></a>
+               </div>
+           </div>
+       </div>
+
+  </div>
+</div>

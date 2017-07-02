@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/hello']">{{brandName}}</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li *ngIf="!is_user_logged_in()">
+                  <a [routerLink]="['/selectaccount']">Join</a>
+                </li>
+                <li *ngIf="!is_user_logged_in()">
+                  <a [routerLink]="['/login']">Login</a>
+                </li>
+
+                <li *ngIf="is_user_logged_in()">
+                  <a [routerLink]="['/requestholiday']">Request holiday</a>
+                </li>
+
+                <li *ngIf="is_user_logged_in()">
+                  <a [routerLink]="['/pendingrequests/',getUserId()]">Pending requests</a>
+                </li>
+
+                <li *ngIf="is_user_logged_in()">
+                  <a [routerLink]="['/user-start/',getUserId()]">Profile</a>
+                </li>
+
+                <li *ngIf="is_user_logged_in()">
+                  <a href="#" (click)="logout()">Logout ({{getUserType()}})</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

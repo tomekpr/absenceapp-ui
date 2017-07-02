@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row lead-top-row">
+    <div class="col-sm-12">
+      <h1 class="gutter-bottom clearfix align-center">
+        Submit new holiday request :-)
+      </h1>
+      <div class="clearfix col-xs-12 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 no-padding">
+        <form [formGroup]="holidayForm" (ngSubmit)="pushLeaveRequest(holidayForm.value)" class="ui form">
+
+          <div class="field" [class.error]="!startDate.valid && startDate.touched">
+            <label for="startDate">Enter start date</label>
+            <div class="ui calendar" id="startdate">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Date/Time" [formControl]="holidayForm.controls['startDate']">
+              </div>
+            </div>  
+          </div>
+
+          <div class="field">
+            <label for="endDate">Enter end date</label>
+            <div class="ui calendar" id="enddate">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Date/Time" [formControl]="holidayForm.controls['endDate']">
+              </div>
+            </div>  
+          </div>
+
+          <div class="field">
+            <label for="returnDate">Enter return date</label>
+            <div class="ui calendar" id="returndate">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Date/Time" [formControl]="holidayForm.controls['returnDate']">
+              </div>
+            </div>  
+          </div>
+
+          <button type="submit" class="ui submit">Submit</button>
+        </form>
+    </div>
+
+    </div>
+    </div>
+  </div>
