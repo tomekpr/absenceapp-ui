@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/globals/jquery/index.d.ts" />
-
 import {Component, ElementRef, AfterViewInit} from '@angular/core';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
 import { HolidayService } from '../services/holiday.service';
@@ -32,20 +30,20 @@ export class RequestHolidayComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    jQuery('#startdate').calendar({type: 'date'});
-    jQuery('#enddate').calendar({type:'date'});
-    jQuery('#returndate').calendar({type:'date'});
+    // jQuery('#startdate').calendar({type: 'date'});
+    // jQuery('#enddate').calendar({type:'date'});
+    // jQuery('#returndate').calendar({type:'date'});
   }
 
   pushLeaveRequest(value: FormGroup) : void {
 
-    let startDate = jQuery("#startdate").calendar('get date');
-    let endDate = jQuery("#enddate").calendar('get date');
-    let returnDate = jQuery("#returndate").calendar('get date');
+    // let startDate = jQuery("#startdate").calendar('get date');
+    // let endDate = jQuery("#enddate").calendar('get date');
+    // let returnDate = jQuery("#returndate").calendar('get date');
 
-    console.log("Start date: ", startDate);
-    console.log("End date: ", endDate);
-    console.log("Return date: ", returnDate);
+    // console.log("Start date: ", startDate);
+    // console.log("End date: ", endDate);
+    // console.log("Return date: ", returnDate);
 
     this.hasError = false;
 
