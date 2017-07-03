@@ -66,13 +66,13 @@ const routes: Routes = [
     CookieModule.forRoot()
   ],
   providers: [
-     {provide: 'API_PING_URL', useValue: 'http://localhost:9292/'},
-     {provide: 'API_USERS_URL', useValue: 'http://localhost:9292/api/v1/'},
-     {provide: ApiConstants.API_HOLIDAYS_URL, useValue: 'http://localhost:9292/api/v1/'},
+     //{provide: 'API_PING_URL', useValue: 'http://localhost:9292/'},
+     //{provide: ApiConstants.API_USERS_URL, useValue: 'http://localhost:9292/api/v1/'},
+     //{provide: ApiConstants.API_HOLIDAYS_URL, useValue: 'http://localhost:9292/api/v1/'},
 
-    //{provide: 'API_PING_URL', useValue: 'https://absenceapp.herokuapp.com/'},
-    //{provide: 'API_USERS_URL', useValue: 'https://absenceapp.herokuapp.com/api/v1/'},
-    //{provide: 'API_HOLIDAYS_URL', useValue: 'https://absenceapp.herokuapp.com/api/v1/'},
+    {provide: 'API_PING_URL', useValue: 'https://absenceapp.herokuapp.com/'},
+    {provide: ApiConstants.API_USERS_URL, useValue: 'https://absenceapp.herokuapp.com/api/v1/'},
+    {provide: ApiConstants.API_HOLIDAYS_URL, useValue: 'https://absenceapp.herokuapp.com/api/v1/'},
 
     {provide: 'BRAND_NAME', useValue: 'Absence tracker'},
     {provide: PingService, useClass: PingService},
