@@ -7,8 +7,8 @@
 header {
     text-align: center;
     color: #fff;
-    background: #f1f2f3;
-    background-image:url("./assets/images/header3.jpg");
+    background: #18bc9c;
+    background-image:url("./assets/images/header.jpg");
     /*position: fixed;*/
     width:100%;
     /*z-index: 1;*/
@@ -122,8 +122,4 @@ img.category-image {
 
 .lead-top-row {
   margin-top:100px;
-}
-
-#about {
-    background-color: white;
 }

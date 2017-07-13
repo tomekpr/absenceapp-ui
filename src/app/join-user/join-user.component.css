@@ -24,3 +24,8 @@ h1 aside {
 .panel {
   width:400px;
 }
+
+.container-join{
+    background: #f1f2f3;
+    padding: 60px 0;
+}

@@ -37,6 +37,24 @@
             </div>  
           </div>
 
+          <div class="ui form">
+            <div class="field">
+              <label>Further information</label>
+              <textarea rows="2" [formControl]="holidayForm.controls['description']"></textarea>
+            </div>
+          </div>
+
+          <!-- how to get value of these?! on change? -->
+          <div class="ui form">
+            <div class="field">
+              <label>Leave type</label>
+              <select class="ui search dropdown" (change)="onChange($event.target.value)">
+                <option value="AN">Annual leave</option>
+                <option value="SL">Sick leave</option>
+              </select>
+            </div>
+          </div>
+
           <button type="submit" class="ui submit">Submit</button>
         </form>
     </div>

@@ -1,5 +1,5 @@
 .footer-bottom {
-    background-color: #15224f;
+    background: #5a5a5a;
     min-height: 30px;
     width: 100%;
     position:fixed;
@@ -21,6 +21,8 @@
 }
 .design a {
     color: #fff;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
 }
 
 .push {

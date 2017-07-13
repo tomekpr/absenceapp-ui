@@ -16,6 +16,7 @@ export interface IAuthService {
     hash(token:string): string;
     completeAuth(res:Response):any;
     getProfile(): UserProfile;
+    getUserId(): string;
 }
 
 @Injectable()
@@ -25,6 +26,11 @@ export class AuthService implements IAuthService{
         private http: Http,
         private cookieService: CookieService,
         private parentRouter: Router) {}
+
+    getUserId(): string {
+        let profile = this.getProfile();
+        return profile != null ? profile.id : null;
+    }
 
     isLoggedIn(): boolean {
         const user_id = this.cookieService.get(CookieConstants.LOGGED_USER_ID);

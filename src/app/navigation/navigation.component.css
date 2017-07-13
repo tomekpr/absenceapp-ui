@@ -1,0 +1,53 @@
+.navbar {
+    background: #5a5a5a;
+    letter-spacing: .8px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0 0 25px -10px #000;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    display: block;
+    border-bottom: 2px solid transparent;
+    font-size: 12px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    line-height: 27px;
+    padding: 0 4px;
+    margin: 0 6px;
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    text-transform:underline;
+    -moz-text-decoration-color: green; /* Code for Firefox */
+    text-decoration-color:green;
+}
+
+a:hover{text-decoration:underline}
+
+/*.header .menu {
+    float: right;
+    margin: 12px 10px 0 0;
+}*/
+
+/*.navbar-default .actions a:first-child {
+    border-radius: 2px 0 0 2px;
+}*/
+/*
+.collapse navbar-collapse > li .b {
+    float: left;
+    text-transform: uppercase;
+    background-color: #009fe3;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 29px;
+    padding: 0 20px;
+}*/

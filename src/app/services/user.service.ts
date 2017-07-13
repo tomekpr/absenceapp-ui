@@ -13,8 +13,16 @@ export class UserService {
      constructor(@Inject(ApiConstants.API_USERS_URL) private apiUrl: string, private http: Http) {}
 
     getUser(id: string): any {
-        let u = new User();
-        return Observable.of(u);
+        let params = new URLSearchParams();
+        params.set('user_id', id);
+
+        let headers = HttpHelper.getHeaders();
+        let options = new RequestOptions({
+            headers: headers,
+            search: params
+        });
+
+        return this.http.get(this.apiUrl + "user", options);
     }
 
     joinUser(user: JoinUserDto): any {

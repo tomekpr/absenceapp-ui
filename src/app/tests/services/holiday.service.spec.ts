@@ -46,7 +46,7 @@ describe('HolidayService spec', () => {
     describe("when requesting new holiday", () => {
         it("performs a POST request with correct parameters", fakeAsync(() => {
             
-            var dto = new DTOS.RequestHolidayDto("name","email","password","company_id",'aa','aa')
+            var dto = new DTOS.RequestHolidayDto("user_id","start","end","return",'description','type')
 
             var res;
             let callCount = 0;
